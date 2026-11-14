@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# RSA Private Keys
+Person_1/keys/
+Person_2/keys/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log

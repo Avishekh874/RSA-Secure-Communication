@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RSA Secure Communication</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="app-brand">
+                <h2>SecureChat</h2>
+                <p>RSA Encrypted Messaging</p>
+            </div>
+
+            <div class="user-section">
+                <h3>Select User</h3>
+
+                <button class="user-option active" id="person1">
+                    Person 1
+                </button>
+
+                <button class="user-option" id="person2">
+                    Person 2
+                </button>
+            </div>
+
+            <div class="security-info">
+                <span class="security-icon">🔒</span>
+                <p>RSA Protected Communication</p>
+                <small>Your messages are encrypted.</small>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+
+            <!-- Chat Header -->
+            <header class="chat-header">
+
+                <div class="contact-info">
+                    <div class="avatar" id="contact-avatar">P2</div>
+
+                    <div>
+                        <h3 id="contact-name">Person 2</h3>
+                        <span id="connection-status">
+                            Connecting...
+                        </span>
+                    </div>
+                </div>
+
+                <div class="encryption-status">
+                    🔐 End-to-End Encryption
+                </div>
+
+            </header>
+
+
+            <!-- Messages -->
+            <section class="messages-container" id="messages">
+
+                <div class="welcome-message">
+                    <h2>Welcome to SecureChat!</h2>
+
+                    <p>
+                        Send encrypted messages securely
+                        between Person 1 and Person 2.
+                    </p>
+
+                    <span>🔒 RSA Secure Communication</span>
+                </div>
+
+            </section>
+
+
+            <!-- Message Input -->
+            <footer class="message-input-area">
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+
+                <button id="send-button">
+                    Send ➤
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

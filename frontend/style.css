@@ -1,0 +1,427 @@
+
+/* =================================
+   1. GLOBAL RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9edef;
+    color: #303030;
+}
+
+
+/* =================================
+   2. MAIN APPLICATION LAYOUT
+================================= */
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =================================
+   3. SIDEBAR
+================================= */
+
+.sidebar {
+    width: 320px;
+    min-width: 280px;
+    background: #202c33;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px;
+}
+
+.app-brand {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #3b484f;
+}
+
+.app-brand h2 {
+    font-size: 25px;
+    color: #25d366;
+    margin-bottom: 7px;
+}
+
+.app-brand p {
+    color: #aebac1;
+    font-size: 13px;
+}
+
+
+/* =================================
+   4. USER PROFILE
+================================= */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 22px 5px;
+    border-bottom: 1px solid #3b484f;
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #075e54;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.profile-details h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.profile-details span {
+    color: #aebac1;
+    font-size: 12px;
+}
+
+
+/* =================================
+   5. CONTACT SECTION
+================================= */
+
+.contact-section {
+    padding-top: 25px;
+}
+
+.contact-section > h3 {
+    font-size: 13px;
+    color: #aebac1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 10px;
+    border-radius: 9px;
+    background: #2a3942;
+    cursor: pointer;
+}
+
+.contact-card.active {
+    border-left: 3px solid #25d366;
+}
+
+.contact-avatar {
+    background: #128c7e;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contact-details span {
+    color: #aebac1;
+    font-size: 11px;
+}
+
+.online-indicator {
+    width: 9px;
+    height: 9px;
+    background: #25d366;
+    border-radius: 50%;
+}
+
+
+/* =================================
+   6. SECURITY INFORMATION
+================================= */
+
+.security-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding: 16px 10px;
+    background: #2a3942;
+    border-radius: 10px;
+}
+
+.security-info > span {
+    font-size: 25px;
+}
+
+.security-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.security-info p {
+    color: #aebac1;
+    font-size: 10px;
+}
+
+
+/* =================================
+   7. MAIN CHAT AREA
+================================= */
+
+.chat-area {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: #efeae2;
+}
+
+
+/* =================================
+   8. CHAT HEADER
+================================= */
+
+.chat-header {
+    height: 75px;
+    min-height: 75px;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #d8dfe3;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#connection-status {
+    color: #667781;
+    font-size: 12px;
+}
+
+.encryption-status {
+    color: #008f72;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =================================
+   9. MESSAGES CONTAINER
+================================= */
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 25px 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+/* =================================
+   10. WELCOME MESSAGE
+================================= */
+
+.welcome-message {
+    margin: auto;
+    text-align: center;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.welcome-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.welcome-message h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #202c33;
+}
+
+.welcome-message p {
+    font-size: 14px;
+    color: #667781;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.welcome-message span {
+    font-size: 11px;
+    color: #008f72;
+}
+
+
+/* =================================
+   11. MESSAGE BUBBLES
+================================= */
+
+.message {
+    max-width: 65%;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.sent {
+    align-self: flex-end;
+    background: #d9fdd3;
+    border-top-right-radius: 3px;
+}
+
+.received {
+    align-self: flex-start;
+    background: white;
+    border-top-left-radius: 3px;
+}
+
+.message-time {
+    display: block;
+    font-size: 10px;
+    color: #667781;
+    text-align: right;
+    margin-top: 5px;
+}
+
+
+/* =================================
+   12. MESSAGE INPUT AREA
+================================= */
+
+.message-input-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 22px;
+    background: #f0f2f5;
+    border-top: 1px solid #d8dfe3;
+}
+
+#message-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: white;
+    padding: 15px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+#message-input:focus {
+    box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.15);
+}
+
+#send-button {
+    border: none;
+    outline: none;
+    background: #075e54;
+    color: white;
+    padding: 14px 23px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#send-button:hover {
+    background: #128c7e;
+}
+
+
+/* =================================
+   13. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 100px;
+        min-width: 100px;
+        padding: 15px 8px;
+    }
+
+    .app-brand h2 {
+        font-size: 16px;
+    }
+
+    .app-brand p,
+    .profile-details,
+    .contact-section > h3,
+    .contact-details,
+    .online-indicator,
+    .security-info > div {
+        display: none;
+    }
+
+    .profile-card,
+    .contact-card {
+        justify-content: center;
+    }
+
+    .security-info {
+        justify-content: center;
+        padding: 12px 5px;
+    }
+
+    .chat-header {
+        padding: 0 12px;
+    }
+
+    .encryption-status {
+        display: none;
+    }
+
+    .messages-container {
+        padding: 15px;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .message-input-area {
+        padding: 10px;
+        gap: 7px;
+    }
+
+    #send-button {
+        padding: 12px 15px;
+    }
+}

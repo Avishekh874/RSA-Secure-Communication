@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Person 2 | SecureChat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-user="Person_2" data-receiver="Person_1">
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="app-brand">
+                <h2>SecureChat</h2>
+                <p>RSA Secure Communication</p>
+            </div>
+
+            <!-- Current User Profile -->
+            <div class="profile-card">
+
+                <div class="avatar">P2</div>
+
+                <div class="profile-details">
+                    <h3>Person 2</h3>
+                    <span>My Account</span>
+                </div>
+
+            </div>
+
+
+            <!-- Contacts -->
+            <div class="contact-section">
+
+                <h3>My Contacts</h3>
+
+                <div class="contact-card active">
+
+                    <div class="avatar contact-avatar">
+                        P1
+                    </div>
+
+                    <div class="contact-details">
+                        <h4>Person 1</h4>
+                        <span>Secure Communication</span>
+                    </div>
+
+                    <span class="online-indicator"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Security Information -->
+            <div class="security-info">
+
+                <span>🔒</span>
+
+                <div>
+                    <h4>RSA Security</h4>
+                    <p>Encrypted communication system</p>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+
+            <!-- Chat Header -->
+            <header class="chat-header">
+
+                <div class="contact-info">
+
+                    <div class="avatar">P1</div>
+
+                    <div>
+                        <h3>Person 1</h3>
+
+                        <span id="connection-status">
+                            Connecting...
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="encryption-status">
+                    🔐 RSA Communication
+                </div>
+
+            </header>
+
+
+            <!-- Messages Container -->
+            <section
+                class="messages-container"
+                id="messages"
+            >
+
+                <div class="welcome-message">
+
+                    <div class="welcome-icon">🔒</div>
+
+                    <h2>Welcome to SecureChat</h2>
+
+                    <p>
+                        Start a secure conversation
+                        with Person 1.
+                    </p>
+
+                    <span>
+                        Messages will be encrypted
+                        before transmission.
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- Message Input -->
+            <footer class="message-input-area">
+
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+
+                <button id="send-button">
+                    Send ➤
+                </button>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="rsa.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
